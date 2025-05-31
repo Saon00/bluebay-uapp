@@ -24,7 +24,7 @@ class ScrollableCardsWidget extends StatelessWidget {
           height: getWidth(70),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: HomeScreenModel.cardNames.length,
+            itemCount: ScrollableCardModel.cardNames.length,
             itemBuilder: (BuildContext context, int i) {
               return Padding(
                 padding: EdgeInsets.symmetric(
@@ -35,7 +35,7 @@ class ScrollableCardsWidget extends StatelessWidget {
                   splashColor: Colors.transparent,
                   onTap: () {
                     homeScreenController.changeCard(
-                      HomeScreenModel.cardNames[i].index,
+                      ScrollableCardModel.cardNames[i].index,
                     );
                   },
                   child: Obx(
@@ -45,17 +45,17 @@ class ScrollableCardsWidget extends StatelessWidget {
                       ),
                       elevation: 0.3,
                       color:
-                          HomeScreenModel.cardNames[i].index ==
+                          ScrollableCardModel.cardNames[i].index ==
                                   homeScreenController.selectedCard.value
                               ? AppColors.tealColor.withAlpha(450)
                               : AppColors.whiteColor.withAlpha(450),
                       child: Padding(
                         padding: EdgeInsets.all(getWidth(10)),
                         child: Text(
-                          HomeScreenModel.cardNames[i].cardName,
+                          ScrollableCardModel.cardNames[i].cardName,
                           style: TextStyle(
                             color:
-                                HomeScreenModel.cardNames[i].index ==
+                                ScrollableCardModel.cardNames[i].index ==
                                         homeScreenController.selectedCard.value
                                     ? AppColors.whiteColor
                                     : AppColors.blackColor,

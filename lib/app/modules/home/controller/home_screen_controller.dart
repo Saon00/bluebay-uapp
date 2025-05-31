@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class HomeScreenController{
+class HomeScreenController extends GetxController{
  final RxInt selectedCard = 0.obs;
 
   void changeCard(var i){
