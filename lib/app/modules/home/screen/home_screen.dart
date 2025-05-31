@@ -1,61 +1,31 @@
 import 'package:bluebay_uapp/app/core/app_size.dart';
+import 'package:bluebay_uapp/app/modules/home/model/home_screen_model.dart';
+import 'package:bluebay_uapp/app/modules/home/screen/scrollable_card_widget.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../core/colors.dart';
-import '../../../core/icons.dart';
+import '../controller/home_screen_controller.dart';
+import 'profile_search_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    HomeScreenController homeScreenController = Get.put(HomeScreenController());
     return Scaffold(
       body: CustomScrollView(
         slivers: [
           // search+profile container
-          SliverPadding(
-            padding: EdgeInsets.zero,
-            sliver: SliverToBoxAdapter(
-              child: Container(
-                height: getWidth(220),
-                decoration: BoxDecoration(
-                  color: AppColors.tealColor.withAlpha(470),
-                ),
+          ProfileSearchWidget(),
 
-                child: Column(
-                  children: [
-                    // logo and profile
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: getWidth(65),
-                        left: getWidth(20),
-                      ),
-                      child: Row(
-                        children: [
-                          Text(
-                            "UAPP",
-                            style: TextStyle(
-                              fontSize: getWidth(30),
-                              color: AppColors.whiteColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-
-                          CircleAvatar(
-                            child: Image.asset(AppIcons.boy),
-                          )
-                        ],
-                      ),
-                    ),
-
-                    // search bar
-                  ],
-                ),
-              ),
-            ),
-          ),
+          // scrollable cards
+          ScrollableCardsWidget(),
         ],
       ),
     );
   }
 }
+
+
