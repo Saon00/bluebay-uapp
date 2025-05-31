@@ -2,13 +2,15 @@ import 'package:bluebay_uapp/app/modules/home/screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../search/screen/search_screen.dart';
+
 class NavBarController extends GetxController {
   final RxInt selectedIndex = 0.obs;
 
   final List<Widget> screens =
       [
         HomeScreen(),
-        Text("2 Screen"),
+        SearchScreen(),
         Text("3 Screen"),
         Text("4 Screen"),
         Text("5 Screen"),
@@ -21,7 +23,7 @@ class NavBarController extends GetxController {
   }
 
   void backToHome() {
-    if (selectedIndex.value != 0) {
+    if (selectedIndex.value != 0) { // to prevent unnecessary change
       selectedIndex.value = 0;
     }
   }

@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // HomeScreenController homeScreenController = Get.put(HomeScreenController());
     return Scaffold(
       body: CustomScrollView(
         slivers: [

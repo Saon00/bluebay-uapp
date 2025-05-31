@@ -17,7 +17,7 @@ class ScrollableCardsWidget extends StatelessWidget {
     return SliverPadding(
       padding: EdgeInsets.symmetric(
         horizontal: getWidth(20),
-        vertical: getWidth(20),
+        vertical: getWidth(10),
       ),
       sliver: SliverToBoxAdapter(
         child: SizedBox(
