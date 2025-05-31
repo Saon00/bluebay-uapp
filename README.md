@@ -2,7 +2,12 @@
 This is a task based project for an interview purpose. I have to clone a Figma design using Flutter. This project shows some screens having some simple and critical functionalities.
 
 ### 📸 Screenshots
-![Home Screen](screenshots/home_screen.jpg)
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; gap: 15px;">
+    <img src="screenshots/home_screen.jpg" alt="Home Screen" style="width: 300px; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+<!--     <img src="screenshots/home_screen.jpg" alt="Home Screen" style="width: 300px; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+    <img src="screenshots/home_screen.jpg" alt="Home Screen" style="width: 300px; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+    <img src="screenshots/home_screen.jpg" alt="Home Screen" style="width: 300px; height: auto; border: 1px solid #ddd; border-radius: 5px;"> -->
+</div>
 
 ### 🛠️ Technologies Used
 List the main technologies, frameworks, and packages used in your project.
