@@ -5,7 +5,6 @@ import 'package:bluebay_uapp/app/modules/mainNavBar/screen/main_navbar_screen.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 void main() {
   runApp(const MainApp());
 }
@@ -17,9 +16,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     AppSizes().init(context);
     return GetMaterialApp(
+    //   defaultTransition: Transition.fadeIn,
+    //   transitionDuration: Duration(seconds: 2),
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.whiteColor,
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins',
       ),
       initialBinding: AppBindings(),
       debugShowCheckedModeBanner: false,

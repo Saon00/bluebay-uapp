@@ -1,8 +1,6 @@
-import 'package:bluebay_uapp/app/modules/home/controller/home_screen_controller.dart';
 import 'package:bluebay_uapp/app/modules/mainNavBar/controller/nav_bar_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../core/app_size.dart';
 import '../../../core/colors.dart';
@@ -19,15 +17,13 @@ class SearchScreen extends StatelessWidget {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
+            // search bar
             SliverPadding(
-              padding: EdgeInsets.only(left: getWidth(25),
-              top: getWidth(10)
-              ),
+              padding: EdgeInsets.only(left: getWidth(25), top: getWidth(10)),
               sliver: SliverToBoxAdapter(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-
                     // back button
                     CircleAvatar(
                       maxRadius: getWidth(25),
@@ -61,7 +57,11 @@ class SearchScreen extends StatelessWidget {
                               color: AppColors.greyColor.withAlpha(500),
                             ),
 
-                            
+                            suffixIcon: IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.tune_outlined),
+                              color: AppColors.blackColor,
+                            ),
 
                             prefixIcon: Padding(
                               padding: EdgeInsets.only(left: getWidth(20)),
@@ -71,11 +71,15 @@ class SearchScreen extends StatelessWidget {
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: AppColors.whiteColor),
+                              borderSide: BorderSide(
+                                color: AppColors.whiteColor,
+                              ),
                               borderRadius: BorderRadius.circular(getWidth(40)),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: AppColors.whiteColor),
+                              borderSide: BorderSide(
+                                color: AppColors.whiteColor,
+                              ),
                               borderRadius: BorderRadius.circular(getWidth(40)),
                             ),
                           ),
@@ -90,7 +94,7 @@ class SearchScreen extends StatelessWidget {
             // scrollable cards
             ScrollableCardsWidget(),
 
-            // popular courses
+            // found courses text
             SliverPadding(
               padding: EdgeInsets.symmetric(
                 horizontal: getWidth(25),
@@ -107,6 +111,7 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
 
+            // found courses
             PopularCourseWidget(),
           ],
         ),

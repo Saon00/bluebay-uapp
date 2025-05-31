@@ -24,7 +24,7 @@ class _MainNavbarScreenState extends State<MainNavbarScreen> {
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+            BottomNavigationBarItem(icon: Icon(Icons.search_rounded), label: "Search"),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_outlined),
               label: "Chat",
