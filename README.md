@@ -11,7 +11,7 @@ This is a task based project for an interview purpose. I have to clone a Figma d
 </div>
 
 ### 🛠️ Technologies Used
-List the main technologies, frameworks, and packages used in your project.
+List the main technologies, frameworks, and packages used in this project.
 - Flutter - UI Toolkit
 - Dart - Programming Language
 - GetX - State Management, Dependency Injection, Routing
@@ -62,3 +62,6 @@ This custom widget is originally created in `home_screen`. And used both `Home` 
 │               │   └───screen
 │               └───screen
 ```
+
+### 📱Live Application for Testing Purpose
+You can download and install in your Android Phone to check this application: `bluebay_uapp\build\app\outputs\flutter-apk\app-release.apk`
