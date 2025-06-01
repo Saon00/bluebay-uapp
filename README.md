@@ -4,6 +4,7 @@ This is a task based project for an interview purpose. I have to clone a Figma d
 ### 📸 Screenshots
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start; gap: 15px;">
     <img src="screenshots/home_screen.jpg" alt="Home Screen" style="width: 320px; height: 680px; border: 1px solid #ddd; border-radius: 5px;">
+<img src="screenshots/overview_screen.jpg" alt="Overview Screen" style="width: 320px; height: 680px; border: 1px solid #ddd; border-radius: 5px;">
    <img src="screenshots/search_screen.jpg" alt="Search Screen" style="width: 320px; height: 680px; border: 1px solid #ddd; border-radius: 5px;">
       <img src="screenshots/application_screen.jpg" alt="Application Screen" style="width: 320px; height: 680px; border: 1px solid #ddd; border-radius: 5px;">
       <img src="screenshots/filter_screen.jpg" alt="Filter Screen" style="width: 320px; height: 680px; border: 1px solid #ddd; border-radius: 5px;">

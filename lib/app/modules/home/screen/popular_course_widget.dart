@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/app_size.dart';
 import '../../../core/colors.dart';
 import '../../../core/images.dart';
+import 'courseoverview_modalsheet.dart';
 
 class PopularCourseWidget extends StatelessWidget {
   const PopularCourseWidget({super.key});
@@ -23,7 +24,8 @@ class PopularCourseWidget extends StatelessWidget {
               InkWell(
                 borderRadius: BorderRadius.circular(getWidth(20)),
                 splashColor: Colors.teal.shade50,
-                onTap: () {},
+                onTap: () => showCourseOverview(context),
+
                 child: Container(
                   height: getWidth(130),
                   decoration: BoxDecoration(
@@ -40,7 +42,8 @@ class PopularCourseWidget extends StatelessWidget {
                           horizontal: getWidth(15),
                           vertical: getWidth(10),
                         ),
-                        child: Row(
+                        child:
+                        Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(
