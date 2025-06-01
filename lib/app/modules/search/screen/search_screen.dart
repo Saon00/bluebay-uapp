@@ -1,4 +1,5 @@
 import 'package:bluebay_uapp/app/modules/mainNavBar/controller/nav_bar_controller.dart';
+import 'package:bluebay_uapp/app/modules/search/filters/screen/filter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -58,7 +59,9 @@ class SearchScreen extends StatelessWidget {
                             ),
 
                             suffixIcon: IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(FilterScreen());
+                              },
                               icon: Icon(Icons.tune_outlined),
                               color: AppColors.blackColor,
                             ),
