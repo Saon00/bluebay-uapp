@@ -176,6 +176,117 @@ class FilterScreen extends StatelessWidget {
                 ),
               ),
             ),
+
+            // delivery pattern
+            Padding(
+              padding: EdgeInsets.only(
+                left: getWidth(20),
+                right: getWidth(20),
+                top: getWidth(20),
+              ),
+
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(getWidth(10)),
+                  border: Border.all(color: AppColors.greyColor.withAlpha(100)),
+                ),
+
+                child: Padding(
+                  padding: EdgeInsets.all(getWidth(10)),
+                  child: Column(
+                    children: [
+                      // title text
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.timelapse_outlined,
+                            color: AppColors.blackColor.withAlpha(400),
+                          ),
+                          SizedBox(width: getWidth(10)),
+                          Text(
+                            "Delivery pattern",
+                            style: TextStyle(
+                              color: AppColors.blackColor.withAlpha(400),
+                              fontWeight: FontWeight.w400,
+                              fontSize: getWidth(18),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(height: getWidth(20)),
+
+                      // check boxes
+                      Obx(
+                        () => Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children:
+                              filterScreenController.deliveryPatterns.asMap().entries.map((
+                                entry,
+                              ) {
+                                int index = entry.key;
+                                DeliveryPatternModel pattern = entry.value;
+
+                                return Padding(
+                                  padding: EdgeInsets.only(
+                                    bottom: getWidth(10),
+                                    right: getWidth(20),
+                                  ),
+                                  child: GestureDetector(
+                                    onTap:
+                                        () => filterScreenController
+                                            .selectedPattern(
+                                              index,
+                                            ), // Call selectPattern
+                                    child: Row(
+                                      // mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        SizedBox(
+                                          width: getWidth(24),
+                                          height: getWidth(24),
+                                          child: Checkbox(
+                                            side: BorderSide(
+                                              color: AppColors.greyColor.withAlpha(700)
+                                            ),
+                                            value: pattern.isSelected,
+                                            onChanged: (bool? newValue) {
+                                              if (newValue == true) {
+                                                filterScreenController
+                                                    .selectedPattern(index);
+                                              }
+                                            },
+
+                                            activeColor: AppColors.tealColor,
+                                            checkColor: AppColors.whiteColor,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                    getWidth(4),
+                                                  ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(width: getWidth(5)),
+                                        Text(
+                                          pattern.name,
+                                          style: TextStyle(
+                                            fontSize: getWidth(16),
+                                            color: AppColors.greyColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -38,6 +38,13 @@ class DeliveryPatternModel {
 
   DeliveryPatternModel(this.name, this.isSelected);
 
+  DeliveryPatternModel copyWith({String? name, bool? isSelected}) {
+    return DeliveryPatternModel(
+      name ?? this.name,
+      isSelected ?? this.isSelected,
+    );
+  }
+
   static List<DeliveryPatternModel> deliveryPatterns = [
     DeliveryPatternModel('On-Campus', false),
     DeliveryPatternModel('Online', true),

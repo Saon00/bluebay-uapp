@@ -23,7 +23,6 @@ class FilterScreenController extends GetxController {
   }
 
   // course duration
-  // cities
   final RxString selectedDuration = FilterScreenModel.courseDuration[0].obs;
   final RxList<String> availableDuration = FilterScreenModel.courseDuration.obs;
 
@@ -44,6 +43,24 @@ class FilterScreenController extends GetxController {
 
   // delivery pattern
   final RxList<DeliveryPatternModel> deliveryPatterns = DeliveryPatternModel.deliveryPatterns.obs;
+
+  void selectedPattern(int selectedIndex){
+    for(int i = 0; i< deliveryPatterns.length; i++){
+      final currentPattern = deliveryPatterns[i];
+      final bool newSelectionState = (i == selectedIndex);
+
+      if (currentPattern.isSelected != newSelectionState) {
+        final updatedPattern = currentPattern.copyWith(isSelected: newSelectionState);
+
+        deliveryPatterns[i] = updatedPattern;
+      }
+    }
+  }
+  DeliveryPatternModel? getSelectedPattern() {
+    // findWhere is a GetX extension on Iterable
+    return deliveryPatterns.firstWhereOrNull((pattern) => pattern.isSelected);
+  }
+
 
 
   // @override
