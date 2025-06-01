@@ -11,7 +11,7 @@ class DropDownWidget extends StatelessWidget {
     required this.titleText,
     required this.value,
     required this.valueChanged,
-    this.isContainered = true,
+    this.isContainered = true, required this.availableList,
   });
 
   final FilterScreenController filterScreenController;
@@ -19,6 +19,7 @@ class DropDownWidget extends StatelessWidget {
   final String value;
   final ValueChanged valueChanged;
   final bool isContainered;
+  final List<String> availableList;
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +63,7 @@ class DropDownWidget extends StatelessWidget {
                     // ),
                     onChanged: valueChanged,
                     items:
-                        filterScreenController.availableCountries
-                            .map<DropdownMenuItem<String>>((String value) {
+                    availableList.map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),

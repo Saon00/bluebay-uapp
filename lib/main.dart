@@ -1,9 +1,7 @@
 import 'package:bluebay_uapp/app/bindings/app_bindings.dart';
 import 'package:bluebay_uapp/app/core/app_size.dart';
 import 'package:bluebay_uapp/app/core/colors.dart';
-import 'package:bluebay_uapp/app/modules/home/screen/home_screen.dart';
 import 'package:bluebay_uapp/app/modules/mainNavBar/screen/main_navbar_screen.dart';
-import 'package:bluebay_uapp/app/modules/search/filters/screen/filter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
